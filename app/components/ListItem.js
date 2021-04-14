@@ -1,15 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
-
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-function AppCard({ title, subTitle, image }) {
+function ListItem({ title, subTitle, image }) {
   return (
-    <View style={styles.card}>
+    <View style={styles.container}>
       <Image style={styles.image} source={image} />
-
-      <View style={styles.detailsContainer}>
+      <View>
         <AppText style={styles.title}>{title}</AppText>
         <AppText style={styles.subTitle}>{subTitle}</AppText>
       </View>
@@ -18,26 +16,21 @@ function AppCard({ title, subTitle, image }) {
 }
 
 const styles = StyleSheet.create({
-  card: {
-    borderRadius: 15,
-    backgroundColor: colors.white,
-    marginBottom: 20,
-    overflow: "hidden",
-  },
-  detailsContainer: {
-    padding: 20,
+  container: {
+    flexDirection: "row",
   },
   image: {
-    width: "100%",
-    height: 200,
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    marginRight: 10,
   },
   subTitle: {
-    color: colors.primary,
-    fontWeight: "bold",
+    color: colors.medium,
   },
   title: {
-    marginBottom: 7,
+    fontWeight: "500",
   },
 });
 
-export default AppCard;
+export default ListItem;
