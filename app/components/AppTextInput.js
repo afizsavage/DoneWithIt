@@ -26,11 +26,14 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     flexDirection: "row",
     width: "100%",
-    padding: 15,
+    height: 50,
     marginVertical: 10,
+    paddingLeft: 10,
   },
+
   icon: {
     marginRight: 10,
+    alignSelf: "center",
   },
 });
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import * as ImagePicker from "expo-image-picker";
 import * as Permissions from "expo-permissions            ";
@@ -35,4 +36,13 @@ export default function App() {
       <Image source={{ uri: ImageUri }} style={{ width: 200, height: 200 }} />
     </Screen>
   );
+=======
+import React, { useState } from "react";
+import LoginScreen from "./app/screens/LoginScreen";
+import RegisterScreen from "./app/screens/RegisterScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
+
+export default function App() {
+  return <ListingEditScreen />;
+>>>>>>> 57cac9d616e6be9e0109d24b050f29a6671dac53
 }
