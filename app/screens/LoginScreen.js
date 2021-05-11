@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Image, StyleSheet } from "react-native";
-
-import AppButton from "../components/AppButton";
-import AppTextInput from "../components/AppTextInput";
-import Screen from "../components/Screen";
-
-function LoginScreen(props) {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  return (
-    <Screen style={styles.container}>
-      <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-      <AppTextInput
-        autoCapitalize="none"
-        autoCorrect={false}
-        icon="email"
-        onChangeText={(text) => setEmail(text)}
-        keyboardType="email-address"
-        placeholder="Email"
-        textContentType="emailAddress"
-      />
-      <AppTextInput
-        autoCapitalize="none"
-        autoCorrect={false}
-        icon="lock"
-        onChangeText={(text) => setPassword(text)}
-        placeholder="Password"
-        secureTextEntry
-        textContentType="password"
-      />
-      <AppButton title="Login" onPress={() => console.log(email, password)} />
-=======
 import React from "react";
 import { Image, StyleSheet } from "react-native";
 import * as Yup from "yup";
@@ -44,7 +10,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(4).label("Password"),
 });
 
-function LoginScreen(props) {
+function LoginScreen() {
   return (
     <Screen style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo-red.png")} />
@@ -74,7 +40,6 @@ function LoginScreen(props) {
         />
         <SubmitButton title="Login" />
       </AppForm>
->>>>>>> 57cac9d616e6be9e0109d24b050f29a6671dac53
     </Screen>
   );
 }
